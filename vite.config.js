@@ -7,10 +7,12 @@ export default defineConfig({
   resolve: {
     alias: {
       "@src": "/src",
+      "@svg": "/src/assets/svg",
       "@components": "/src/components",
       "@login": "/src/components/authentication/login",
       "@register": "/src/components/authentication/register",
       "@board": "/src/components/board",
+      "@hoc": "/src/components/hoc",
       "@publicLayout": "/src/components/layout/public",
       "@privateLayout": "/src/components/layout/private",
       "@modal": "/src/components/modal",

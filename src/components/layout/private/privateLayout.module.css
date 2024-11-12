@@ -1,0 +1,19 @@
+.layoutContainer {
+  /* display: flex; */
+  /* flex-direction: column; */
+  min-height: 100vh; /* Gör att layouten täcker hela höjden av skärmen */
+}
+
+.header {
+  flex: 0 0 auto; /* Behålls fast högst upp */
+}
+
+.main {
+  flex: 1 0 auto; /* Fyller ut resterande utrymme mellan header och footer */
+  padding: 20px; /* Justera efter behov */
+  /*   background-color: #f4f4f9; /* Valfritt */
+}
+
+.footer {
+  flex: 0 0 auto; /* Behålls fast längst ner */
+}

@@ -1,0 +1,139 @@
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popupHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333333;
+}
+
+.description,
+.status {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.commentList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #e0e0e0;
+}
+
+.commentItem {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 5px;
+  border-left: 5px solid #007bff;
+  font-size: 14px;
+  color: #555555;
+}
+
+.editButton,
+.deleteButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  color: #0056b3;
+}
+
+/* Inmatningsfält och textområde */
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.button,
+.closeButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.closeButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.closeButton:hover {
+  background-color: #ddd;
+}
+
+.deleteButton {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #ff1a1a;
+}
+
+.confirmDelete {
+  color: #ff4d4d;
+  font-weight: bold;
+}

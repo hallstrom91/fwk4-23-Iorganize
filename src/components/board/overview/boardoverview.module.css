@@ -1,14 +1,15 @@
 .boardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background-color: #f4f4f9;
+  min-height: 100vh;
+  padding: 2rem;
+  /* background-color: #f4f4f9; */
 }
 
 .boardCard {
-  background-color: #ffffff;
+  background-color: #f4f4f0;
   padding: 15px;
+  margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
@@ -16,7 +17,7 @@
 }
 
 .boardCard:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
 
 .boardTitle {
@@ -28,4 +29,34 @@
 .boardDescription {
   font-size: 14px;
   color: #666;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.btnContainer > .createBoardButton {
+  margin-right: 0;
+}
+
+.createBoardButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.createBoardButton:hover {
+  background-color: #0056b3; /* Mörkare blå färg vid hover */
+}
+
+.createBoardButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Markeringsring vid fokus */
 }

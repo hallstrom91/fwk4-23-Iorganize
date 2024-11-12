@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    "module": "module",
+    "baseUrl": ".",
+    "module": "ESNext",
     "target": "ES2023",
+    "moduleResolution": "Node",
     "checkJs": false
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
-
-

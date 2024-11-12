@@ -4,6 +4,8 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const API_URL_AUTH = import.meta.env.VITE_API_URL_AUTH;
+  const API_URL_DOMAIN = import.meta.env.VITE_API_URL_DOMAIN;
+
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userData, setUserData] = useState(null);
@@ -76,7 +78,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkCookieConsent = async () => {
     try {
-      const response = await fetch(`${API_URL_AUTH}/cookie/check`, {
+      const response = await fetch(`${API_URL_DOMAIN}/cookie/check`, {
         method: "GET",
         headers: {
           "Content-Type": "applicaton/json",
@@ -95,7 +97,7 @@ export const AuthProvider = ({ children }) => {
 
   const acceptCookieConsent = async () => {
     try {
-      const response = await fetch(`${API_URL_AUTH}/cookie/accept`, {
+      const response = await fetch(`${API_URL_DOMAIN}/cookie/accept`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -114,7 +116,7 @@ export const AuthProvider = ({ children }) => {
 
   const declineCookieConsent = async () => {
     try {
-      const response = await fetch(`${API_URL_AUTH}/cookie/decline`, {
+      const response = await fetch(`${API_URL_DOMAIN}/cookie/decline`, {
         method: "POST",
         credentials: "include",
         headers: {

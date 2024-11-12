@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const BoardContext = createContext();
 
@@ -45,7 +45,27 @@ export const BoardProvider = ({ children }) => {
     }
   };
 
-  const value = { fetchAllUserBoards, fetchBoardWithTasks };
+  const createNewBoard = async (name, description) => {
+    try {
+      const response = await fetch(`${API_URL_DOMAIN}/board/create`, {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, description }),
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error("Skapande av nytt bord misslyckades");
+      }
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  const value = { fetchAllUserBoards, fetchBoardWithTasks, createNewBoard };
 
   return (
     <BoardContext.Provider value={value}>{children}</BoardContext.Provider>

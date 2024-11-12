@@ -6,12 +6,14 @@ import PublicRoutes from "@routes/PublicRoutes";
 import PublicLayout from "@publicLayout/PublicLayout";
 import PrivateLayout from "@privateLayout/PrivateLayout";
 import "./App.css";
+import CookieConsent from "@hoc/CookieConsent";
 
 export default function App() {
   const { isAuthenticated } = useAuth();
 
   return (
     <>
+      <CookieConsent />
       {isAuthenticated ? (
         <>
           <Routes>
